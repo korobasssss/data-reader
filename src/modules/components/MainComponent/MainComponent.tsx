@@ -28,6 +28,7 @@ export const MainComponent = () => {
           const firstSheetName = workbook.SheetNames[0];
           const worksheet = workbook.Sheets[firstSheetName];
           const jsonData: JsonDataType[] = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+          jsonData.shift()
           setData(parseData(jsonData));
           setError(null)
       }

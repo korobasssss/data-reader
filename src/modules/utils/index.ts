@@ -1,1 +1,1 @@
-export * from './parseData'
+export * from './parseData/parseData'
