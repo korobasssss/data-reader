@@ -4,17 +4,20 @@ import { JsonDataType } from "../../types";
 export const parseData = (jsonData: JsonDataType[]): Person[] => {
     const parsedData: Person[] = [];
 
+    let key = 0;
     for (let i = 0; i < jsonData.length; i++) {
         const row: JsonDataType = jsonData[i];
         if (Array.isArray(row)) {
           if (typeof row[0] === 'string') {
             const person: Person =  {
+              key: key, 
               name: row[0],
               year: row[1],
               monthCount: row[2],
               commonSalary: row[3],
               vacationPay: 0
             }
+            key++
             parsedData.push(person)
           } else {
             parsedData[parsedData.length - 1].monthCount++

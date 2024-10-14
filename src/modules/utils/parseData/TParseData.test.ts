@@ -9,6 +9,7 @@ describe('tests parse data', () => {
             ['Иванов И.И', 2020, 1, 20000]
         ]
         const persons: Person[] = [{
+            key: 0,
             name: 'Иванов И.И',
             year: 2020,
             monthCount: 1,
@@ -28,6 +29,7 @@ describe('tests parse data', () => {
         ]
         const persons: Person[] = [
             {
+                key: 0,
                 name: 'Иванов И.И',
                 year: 2020,
                 monthCount: 2,
@@ -35,6 +37,7 @@ describe('tests parse data', () => {
                 vacationPay: 23411.37
             },
             {
+                key: 1,
                 name: 'Петров П.П.',
                 year: 2020,
                 monthCount: 3,
